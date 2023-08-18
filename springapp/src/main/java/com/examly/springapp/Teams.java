@@ -1,6 +1,5 @@
 package com.examly.springapp;
 
-
 public class Teams {
     private String name;
     private String country;
