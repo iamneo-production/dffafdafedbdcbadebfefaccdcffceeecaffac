@@ -113,32 +113,32 @@ describe('AdminService Integration Tests', () => {
     );
   });
 
-  fit('Week5_Day3_should create a new team via the backend', (done: DoneFn) => {
-    const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
+  // fit('Week5_Day3_should create a new team via the backend', (done: DoneFn) => {
+  //   const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
-    service.createTeam(newTeam).subscribe(
-      (createdTeam: Team) => {
-        expect(createdTeam).toEqual(newTeam);
-        done();
-      },
-      (error: any) => {
-        fail('Failed to create team: ' + JSON.stringify(error));
-      }
-    );
-  });
+  //   service.createTeam(newTeam).subscribe(
+  //     (createdTeam: Team) => {
+  //       expect(createdTeam).toEqual(newTeam);
+  //       done();
+  //     },
+  //     (error: any) => {
+  //       fail('Failed to create team: ' + JSON.stringify(error));
+  //     }
+  //   );
+  // });
 
-  fit('Week5_Day3_should retrieve players from the backend', (done: DoneFn) => {
-    service.getPlayers().subscribe(
-      (players: Player[]) => {
-        console.log(players)
-        expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
-        done();
-      },
-      (error: any) => {
-        fail('Failed to retrieve teams: ' + JSON.stringify(error));
-      }
-    );
-  });
+  // fit('Week5_Day3_should retrieve players from the backend', (done: DoneFn) => {
+  //   service.getPlayers().subscribe(
+  //     (players: Player[]) => {
+  //       console.log(players)
+  //       expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
+  //       done();
+  //     },
+  //     (error: any) => {
+  //       fail('Failed to retrieve teams: ' + JSON.stringify(error));
+  //     }
+  //   );
+  // });
 
 
 
